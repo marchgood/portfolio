@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aplikasi Kredit Perabot | Rizky Azhari</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-detail {
+            min-height: 100vh;
+            padding: 150px 0 100px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 35px;
+            color: #21b6ff;
+            font-weight: 700;
+        }
+
+        .project-detail h1 {
+            font-size: clamp(40px, 7vw, 70px);
+            line-height: 1.05;
+            margin: 15px 0;
+        }
+
+        .project-detail h1 span {
+            color: #21b6ff;
+        }
+
+        .project-description {
+            max-width: 750px;
+            color: #89929c;
+            font-size: 17px;
+            margin-bottom: 40px;
+        }
+
+        .detail-box {
+            max-width: 800px;
+            padding: 30px;
+            background: #0e1217;
+            border: 1px solid #202830;
+            border-radius: 12px;
+        }
+
+        .detail-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .detail-box p {
+            color: #89929c;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tags span {
+            border: 1px solid #303943;
+            padding: 6px 10px;
+            border-radius: 5px;
+            color: #9ca6b0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav">
+
+        <a class="logo" href="../index.html">
+            RA<span>.</span>
+        </a>
+
+        <a href="../index.html">
+            ← Back Home
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="project-detail">
+
+    <div class="container">
+
+        <a class="back" href="../index.html#projects">
+            ← Back to Projects
+        </a>
+
+        <p class="eyebrow">
+            PROJECT 01
+        </p>
+
+        <h1>
+            Aplikasi Kredit
+            <span>Perabot.</span>
+        </h1>
+
+        <p class="project-description">
+            Aplikasi desktop sederhana yang dibuat untuk membantu
+            proses transaksi kredit perabot rumah. Project ini
+            menggunakan C# dan dikembangkan melalui Visual Studio.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>
+                Tentang Project
+            </h2>
+
+            <p>
+                Aplikasi ini merupakan project pembelajaran
+                pemrograman desktop. Di dalamnya terdapat proses
+                input data, pilihan produk, perhitungan transaksi,
+                dan tampilan antarmuka aplikasi.
+            </p>
+
+            <h2>
+                Technologies
+            </h2>
+
+            <div class="tags">
+
+                <span>C#</span>
+                <span>Visual Studio</span>
+                <span>Windows Forms</span>
+                <span>Programming</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer">
+
+        <span>
+            © <b id="year"></b> Rizky Azhari
+        </span>
+
+        <a href="../index.html">
+            Back to Home ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
