@@ -1,22 +1,32 @@
-// ========================================
-// MOBILE MENU
-// ========================================
+/* =========================
+   MOBILE MENU
+========================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+const menuToggle =
+    document.getElementById("menuToggle");
 
-menuBtn.addEventListener("click", () => {
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuToggle.addEventListener("click", function () {
+
     navMenu.classList.toggle("show");
+
 });
 
 
-// Tutup menu setelah memilih menu
+/* =========================
+   CLOSE MENU AFTER CLICK
+========================= */
 
-const navLinks = document.querySelectorAll("nav a");
+const navLinks =
+    document.querySelectorAll(".nav-link");
 
-navLinks.forEach(link => {
 
-    link.addEventListener("click", () => {
+navLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
 
         navMenu.classList.remove("show");
 
@@ -25,163 +35,138 @@ navLinks.forEach(link => {
 });
 
 
-// ========================================
-// FOOTER YEAR
-// ========================================
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
 
-const year = document.getElementById("year");
-
-if (year) {
-
-    year.textContent = new Date().getFullYear();
-
-}
+const sections =
+    document.querySelectorAll("section[id]");
 
 
-// ========================================
-// SKILL MODAL
-// ========================================
+window.addEventListener("scroll", function () {
 
-const modal = document.getElementById("modal");
+    let current = "";
 
-const modalTitle =
-    document.getElementById("modalTitle");
+    sections.forEach(function (section) {
 
-const modalText =
-    document.getElementById("modalText");
+        const sectionTop =
+            section.offsetTop - 120;
 
-const closeModal =
-    document.getElementById("closeModal");
+        const sectionHeight =
+            section.clientHeight;
 
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY <
+            sectionTop + sectionHeight
+        ) {
 
-const skillCards =
-    document.querySelectorAll(".skill");
+            current =
+                section.getAttribute("id");
 
+        }
 
-skillCards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        const skill =
-            card.getAttribute("data-skill");
-
-        const detail =
-            card.getAttribute("data-detail");
+    });
 
 
-        modalTitle.textContent = skill;
+    navLinks.forEach(function (link) {
 
-        modalText.textContent = detail;
+        link.classList.remove("active");
 
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
 
-        modal.classList.add("show");
+            link.classList.add("active");
 
-        modal.setAttribute(
-            "aria-hidden",
-            "false"
-        );
+        }
 
     });
 
 });
 
 
-// ========================================
-// CLOSE MODAL
-// ========================================
+/* =========================
+   CURRENT YEAR
+========================= */
 
-closeModal.addEventListener("click", () => {
-
-    modal.classList.remove("show");
-
-    modal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-});
+const year =
+    document.getElementById("year");
 
 
-// Klik area luar popup untuk menutup
+if (year) {
 
-modal.addEventListener("click", event => {
+    year.textContent =
+        new Date().getFullYear();
 
-    if (event.target === modal) {
-
-        modal.classList.remove("show");
-
-        modal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-    }
-
-});
+}
 
 
-// Tekan ESC untuk menutup popup
+/* =========================
+   MESSAGE
+========================= */
 
-document.addEventListener("keydown", event => {
+function showMessage(message) {
 
-    if (event.key === "Escape") {
+    alert(message);
 
-        modal.classList.remove("show");
-
-        modal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-    }
-
-});
+}
 
 
-// ========================================
-// SCROLL ANIMATION
-// ========================================
+/* =========================
+   SCROLL REVEAL
+========================= */
 
-const animatedElements =
+const revealElements =
     document.querySelectorAll(
-        ".skill, .project, .info"
+        ".skill-card, .project-card, .info-card"
     );
 
 
-const observer =
+const revealObserver =
     new IntersectionObserver(
-        entries => {
 
-            entries.forEach(entry => {
+        function (entries) {
+
+            entries.forEach(function (entry) {
 
                 if (entry.isIntersecting) {
 
-                    entry.target.style.opacity = "1";
+                    entry.target.classList.add(
+                        "show-reveal"
+                    );
 
-                    entry.target.style.transform =
-                        "translateY(0)";
+                    revealObserver.unobserve(
+                        entry.target
+                    );
 
                 }
 
             });
 
         },
+
         {
-            threshold: 0.12
+            threshold: 0.15
         }
+
     );
 
 
-animatedElements.forEach(element => {
+revealElements.forEach(function (element) {
 
-    element.style.opacity = "0";
+    element.classList.add("reveal");
 
-    element.style.transform =
-        "translateY(25px)";
-
-    element.style.transition =
-        "opacity 0.6s ease, transform 0.6s ease";
-
-    observer.observe(element);
+    revealObserver.observe(element);
 
 });
+
+
+/* =========================
+   CONSOLE MESSAGE
+========================= */
+
+console.log(
+    "🚀 Welcome to Rizky Azhari's Portfolio!"
+);
