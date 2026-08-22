@@ -1,6 +1,669 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfolio Muhammad Rizky Azhari - Software Engineering Student">
+
+    <meta name="keywords"
+          content="Muhammad Rizky Azhari, Rizky Azhari, RPL, Software Engineering, Web Developer, Portfolio">
+
+    <meta name="author"
+          content="Muhammad Rizky Azhari">
+
+    <title>Muhammad Rizky Azhari | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                RA<span>.</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HOME
+        ========================== -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <p class="hero-small">
+                        HELLO, I'M
+                    </p>
+
+                    <h1>
+                        Muhammad
+                        <br>
+                        Rizky
+                        <span>Azhari.</span>
+                    </h1>
+
+                    <h2>
+                        Software Engineering Student
+                    </h2>
+
+                    <p class="hero-description">
+                        Saya pelajar Rekayasa Perangkat Lunak yang
+                        suka membuat aplikasi, website, dan belajar
+                        teknologi baru.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects"
+                           class="btn btn-primary">
+                            View Projects
+                        </a>
+
+                        <a href="#contact"
+                           class="btn btn-outline">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/marchgood"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                        <a href="#"
+                           onclick="showMessage('Instagram belum ditambahkan')">
+                            Instagram ↗
+                        </a>
+
+                        <a href="#"
+                           onclick="showMessage('LinkedIn belum ditambahkan')">
+                            LinkedIn ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO -->
+
+                <div class="hero-visual">
+
+                    <div class="photo-ring">
+
+                        <div class="hero-photo">
+
+                            <img
+                                src="RizkyAzhari.jpg"
+                                alt="Foto Muhammad Rizky Azhari"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p>ABOUT ME</p>
+
+                    <h2>
+                        Tentang Saya
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <h3>
+                            Hi, saya Rizky 👋
+                        </h3>
+
+                        <p>
+                            Saya adalah pelajar jurusan
+                            <strong>Rekayasa Perangkat Lunak (RPL)</strong>
+                            yang memiliki ketertarikan terhadap dunia
+                            teknologi dan pemrograman.
+                        </p>
+
+                        <p>
+                            Saya senang mempelajari cara membuat website,
+                            aplikasi, dan berbagai project menggunakan
+                            teknologi baru.
+                        </p>
+
+                        <p>
+                            Bagi saya, coding bukan hanya tentang menulis
+                            kode, tetapi juga tentang memecahkan masalah
+                            dan terus berkembang.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-info">
+
+                        <div class="info-card">
+
+                            <span>01</span>
+
+                            <div>
+
+                                <h3>Education</h3>
+
+                                <p>
+                                    Rekayasa Perangkat Lunak
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <h3>Focus</h3>
+
+                                <p>
+                                    Web Development
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <h3>Mindset</h3>
+
+                                <p>
+                                    Keep Learning
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section id="skills" class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p>MY SKILLS</p>
+
+                    <h2>
+                        Technologies
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            01
+                        </div>
+
+                        <h3>
+                            HTML
+                        </h3>
+
+                        <p>
+                            Membuat struktur website
+                            yang rapi dan semantik.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            02
+                        </div>
+
+                        <h3>
+                            CSS
+                        </h3>
+
+                        <p>
+                            Membuat tampilan website
+                            modern dan responsive.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            03
+                        </div>
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Membuat website menjadi
+                            interaktif dan dinamis.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            04
+                        </div>
+
+                        <h3>
+                            C#
+                        </h3>
+
+                        <p>
+                            Membuat aplikasi menggunakan
+                            bahasa pemrograman C#.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            05
+                        </div>
+
+                        <h3>
+                            GitHub
+                        </h3>
+
+                        <p>
+                            Mengelola project dan
+                            repository menggunakan GitHub.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-number">
+                            06
+                        </div>
+
+                        <h3>
+                            UI Design
+                        </h3>
+
+                        <p>
+                            Membuat desain interface
+                            yang sederhana dan modern.
+                        </p>
+
+                        <div class="skill-line">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p>MY WORK</p>
+
+                    <h2>
+                        Featured Projects
+                    </h2>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                            <span class="project-icon">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Project Website
+                        </h3>
+
+                        <p>
+                            Website sederhana yang dibuat
+                            menggunakan HTML, CSS, dan JavaScript.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+                        <a href="projects/project1.html"
+                           class="project-link">
+                            View Project →
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <span class="project-icon">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Application Project
+                        </h3>
+
+                        <p>
+                            Project aplikasi yang dibuat
+                            sebagai latihan pemrograman.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>C#</span>
+                            <span>Visual Studio</span>
+
+                        </div>
+
+                        <a href="projects/project2.html"
+                           class="project-link">
+                            View Project →
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <div class="project-top">
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                            <span class="project-icon">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Arduino Project
+                        </h3>
+
+                        <p>
+                            Project teknologi menggunakan
+                            Arduino dan sensor.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Arduino</span>
+                            <span>C++</span>
+                            <span>IoT</span>
+
+                        </div>
+
+                        <a href="projects/project3.html"
+                           class="project-link">
+                            View Project →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact"
+                 class="section contact-section">
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <div class="section-title">
+
+                        <p>GET IN TOUCH</p>
+
+                        <h2>
+                            Let's Work Together.
+                        </h2>
+
+                    </div>
+
+                    <p class="contact-description">
+                        Punya project atau ingin terhubung?
+                        Jangan ragu untuk menghubungi saya.
+                    </p>
+
+
+                    <div class="contact-buttons">
+
+                        <a href="mailto:emailkamu@gmail.com"
+                           class="btn btn-primary">
+                            Email Me
+                        </a>
+
+                        <a href="https://github.com/marchgood"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © <span id="year"></span>
+                Muhammad Rizky Azhari.
+                All Rights Reserved.
+            </p>
+
+            <a href="#home">
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
